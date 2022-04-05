@@ -25,7 +25,7 @@ def clean(text):
       clean_text = clean_text + ch
   return clean_text
 
-with open ('/content/Dataset3.json') as f:
+with open ('Dataset3.json') as f:
   BOT_CONFIG = json.load(f)
 len(BOT_CONFIG['intents'].keys())
 
@@ -69,6 +69,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram import Update, ForceReply
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 from telegram.ext import CallbackQueryHandler
+from config import TOKEN
 
 # Enable logging
 logging.basicConfig(
@@ -83,7 +84,7 @@ logger = logging.getLogger(__name__)
 def start(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /start is issued."""
     user = update.effective_user
-    sticHello=open("/content/Hello.webp", "rb")
+    sticHello=open("Hello.webp", "rb")
     update.message.reply_sticker(sticHello)
     time.sleep(1)
     update.message.reply_markdown_v2(
@@ -289,7 +290,7 @@ def echo(update: Update, context: CallbackContext) -> None:
 def main() -> None:
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
-    updater = Updater("Bot's token")
+    updater = Updater(token=TOKEN)
 
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
