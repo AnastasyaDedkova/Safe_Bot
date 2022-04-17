@@ -9,14 +9,13 @@
 
 ## Description
 
-   The dialog bot generates chat cues based on the dataset and provides links to the required resources when pressing the keyboard buttons.
+   Chat bot that generates chat cues based on the dataset and provides links to the required resources when pressing the keyboard buttons.
 ## Screenshots
 
 
 ![App Screenshot](https://i.ibb.co/sbcWbSH/3.png)
 
-
-
+___
 ![App Screenshot](https://i.ibb.co/KxsLdM7/21.png)
 
 ## Libraries
