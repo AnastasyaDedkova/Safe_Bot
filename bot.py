@@ -243,10 +243,10 @@ def echo(update: Update, context: CallbackContext) -> None:
     if input_text == '🚨 Неотложная помощь' or input_text == 'Неотложная помощь':
       update.message.reply_text(first_menu_message(),
                             reply_markup=first_menu_keyboard())
-    elif input_text == '☝ Правила безопасности'or input_text == 'Правила безопасности':
+    elif input_text == '☝ Правила безопасности' or input_text == 'Правила безопасности':
       update.message.reply_text(second_menu_message(),
                             reply_markup=second_menu_keyboard())
-    elif input_text == '💎 Полезные ресурсы'or input_text == 'Полезные ресурсы':
+    elif input_text == '💎 Полезные ресурсы' or input_text == 'Полезные ресурсы':
       update.message.reply_text(third_menu_message(),
                             reply_markup=third_menu_keyboard())
     elif input_text == '😿  Взломали мою страничку' or input_text == 'Взломали мою страничку':
