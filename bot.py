@@ -234,49 +234,49 @@ def test_inline_menu_message():
 
 def help_command(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /help is issued."""
-    update.message.reply_text('Help!')  
+    update.message.reply_text('Напишите сообщение или воспользуйтесь кнопками меню внизу экрана')  
     
 
 def echo(update: Update, context: CallbackContext) -> None:
     """Echo the user message."""
     input_text = update.message.text
-    if input_text == '🚨 Неотложная помощь':
+    if input_text == '🚨 Неотложная помощь' or input_text == 'Неотложная помощь':
       update.message.reply_text(first_menu_message(),
                             reply_markup=first_menu_keyboard())
-    elif input_text == '☝ Правила безопасности':
+    elif input_text == '☝ Правила безопасности'or input_text == 'Правила безопасности':
       update.message.reply_text(second_menu_message(),
                             reply_markup=second_menu_keyboard())
-    elif input_text == '💎 Полезные ресурсы':
+    elif input_text == '💎 Полезные ресурсы'or input_text == 'Полезные ресурсы':
       update.message.reply_text(third_menu_message(),
                             reply_markup=third_menu_keyboard())
-    elif input_text == '😿  Взломали мою страничку':
+    elif input_text == '😿  Взломали мою страничку' or input_text == 'Взломали мою страничку':
       update.message.reply_text(hacked_page_inline_menu_message(),
                             reply_markup=hacked_page_menu_inlinekeyboard())
-    elif input_text == '🔑  Нужен надёжный пароль':
+    elif input_text == '🔑  Нужен надёжный пароль' or input_text == 'Нужен надёжный пароль':
       update.message.reply_text(password_inline_menu_message(),
                             reply_markup=password_menu_inlinekeyboard())
-    elif input_text == '🆘  Меня атакуют мошенники':
+    elif input_text == '🆘  Меня атакуют мошенники' or input_text == 'Меня атакуют мошенники':
       update.message.reply_text(scam_inline_menu_message(),
                             reply_markup=scam_menu_inlinekeyboard())  
-    elif input_text == '💬   Общение':
+    elif input_text == '💬   Общение' or input_text == 'Общение':
       update.message.reply_text(social_inline_menu_message(),
                             reply_markup=social_menu_inlinekeyboard())
-    elif input_text == '👜   Платежи и покупки':
+    elif input_text == '👜   Платежи и покупки' or input_text == 'Платежи и покупки':
       update.message.reply_text(buy_inline_menu_message(),
                             reply_markup=buy_menu_inlinekeyboard())
-    elif input_text == '⭐   Госуслуги':
+    elif input_text == '⭐   Госуслуги' or input_text == 'Госуслуги':
       update.message.reply_text(public_inline_menu_message(),
                             reply_markup=public_menu_inlinekeyboard())
-    elif input_text == '📮   Электронная почта':
+    elif input_text == '📮   Электронная почта' or input_text == 'Электронная почта':
       update.message.reply_text(mail_inline_menu_message(),
                             reply_markup=mail_menu_inlinekeyboard())
-    elif input_text == '🎥  Видеокурсы':
+    elif input_text == '🎥  Видеокурсы' or input_text == 'Видеокурсы':
       update.message.reply_text(video_inline_menu_message(),
                             reply_markup=video_menu_inlinekeyboard())
-    elif input_text == '📚  Азбука Интернета':
+    elif input_text == '📚  Азбука Интернета' or input_text == 'Азбука интернета':
       update.message.reply_text(e_book_inline_menu_message(),
                             reply_markup=e_book_menu_inlinekeyboard())
-    elif input_text == '🏆  Тесты':
+    elif input_text == '🏆  Тесты' or input_text == 'Тесты':
       update.message.reply_text(test_inline_menu_message(),
                             reply_markup=test_menu_inlinekeyboard())
     elif input_text == 'Вернуться':
